@@ -10,4 +10,5 @@ export interface Patient {
     phone?: string;
     birthdate: string;
     bloodType: BloodType;
+    keywords: Array<string>;
 }

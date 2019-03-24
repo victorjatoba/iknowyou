@@ -17,19 +17,22 @@ export class HomePage {
             id: '1',
             name: 'Victor Jatobá',
             birthdate: '10/21/1988',
-            bloodType: BloodType.O_NEGATIVE
+            bloodType: BloodType.O_NEGATIVE,
+            keywords: ['diabets', 'lupus']
         },
         {
             id: '2',
             name: 'Matheus Silva',
             birthdate: '03/11/1992',
-            bloodType: BloodType.A_POSITIVE
+            bloodType: BloodType.A_POSITIVE,
+            keywords: ['Relapsing Polychondritis', 'lupus', 'Scleroderma', 'celiac', 'toothache', 'headache']
         },
         {
             id: '3',
             name: 'Luigi Scarminio',
             birthdate: '01/27/1982',
-            bloodType: BloodType.B_NEGATIVE
+            bloodType: BloodType.B_NEGATIVE,
+            keywords: ['celiac', 'lupus', 'Scleroderma']
         }
     ];
 

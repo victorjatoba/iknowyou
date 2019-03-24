@@ -19,15 +19,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
+@Entity(name="MEDICALHISTORY")
 public class MedicalHistory {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column
-	private LocalDateTime date;
-	@Column
+	@Column(name="HISTORY_DATE")
+	private LocalDateTime historyDate;
+	@Column(name="NOTE")
 	private String note;
 	
 	@ManyToOne(fetch=FetchType.LAZY)

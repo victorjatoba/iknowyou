@@ -13,35 +13,38 @@ import javax.persistence.OneToMany;
 
 import com.iknowyou.domain.medicalhistory.MedicalHistory;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
+@Entity(name="PATIENT")
 public class Patient {
 
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	@Column
 	private String name;
-	@Column
+	@Column(name="AGE")
 	private Integer age;
-	@Column
+	@Column(name="BLOODTYPE")
 	private String bloodType;
-	@Column
+	@Column(name="ADDRESS")
 	private String address;
-	@Column
+	@Column(name="PHONE")
 	private String phone;
-	@Column
+	@Column(name="EMERGENCYCONTACT")
 	private String emergencyContact;
 	
 	@OneToMany(mappedBy="patient")
+	@Setter(AccessLevel.NONE)
 	private List<MedicalHistory> histories = new LinkedList<>();
 	
 	public List<MedicalHistory> getHistories() {

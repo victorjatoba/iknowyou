@@ -14,6 +14,18 @@ The source code is located at the backend folder. Just download and import as a 
 Execute *IknowyouApplication* as Java Application. Spring Boot will start Tomcat and the application will run on *localhost:8080*.
 Check https://github.com/victorjatoba/iknowyou/wiki/Project-Design for available end-points.
 
+## Frontend
+
+You will need to install node and ionic on your machine in order to run the frontend project.
+
+Node: https://nodejs.org/en/
+Ionic: https://ionicframework.com/docs/installation/cli
+
+The source code is located at the frontend folder. Just download it, get into the folder and run the following commands:
+
+npm install
+ionic serve
+
 ### Known Issues
 
 Currently, the CORS is enabled. The front-end won't be able to retrieve the data without a CORS plugin in the browser.

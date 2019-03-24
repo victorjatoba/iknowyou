@@ -1,0 +1,1 @@
+INSERT INTO Patient(name,age,bloodType,address,phone,emergencyContact) VALUES ("Luigi Scarminio",37,"O-","Cool Street 123","+55 12 12345678", "Call Mom +55 12 987654321");

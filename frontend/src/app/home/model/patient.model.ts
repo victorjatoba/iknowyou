@@ -11,5 +11,4 @@ export interface Patient {
     address?: string;
     phone?: string;
     emergencyContact?: string;
-    keywords: Array<string>;
 }

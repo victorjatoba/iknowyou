@@ -19,21 +19,18 @@ export class HomePage implements OnInit {
             name: 'Victor Jatobá',
             age: '21',
             bloodType: BloodType.O_NEGATIVE,
-            keywords: ['diabets', 'lupus']
         },
         {
             id: '2',
             name: 'Matheus Silva',
             age: '32',
             bloodType: BloodType.A_POSITIVE,
-            keywords: ['Relapsing Polychondritis', 'lupus', 'Scleroderma', 'celiac', 'toothache', 'headache']
         },
         {
             id: '3',
             name: 'Luigi Scarminio',
             age: '40',
             bloodType: BloodType.B_NEGATIVE,
-            keywords: ['celiac', 'lupus', 'Scleroderma']
         }
     ];
 
@@ -42,15 +39,13 @@ export class HomePage implements OnInit {
     constructor(public apiService: ApiService) { }
 
     ngOnInit() {
-
-        this.getKeywords();
+        this.getPatients();
     }
 
     searchPatient(event: {
         component: IonicSelectableComponent,
         value: any
     }) {
-        this.getPatients();
         this.getKeywords();
     }
 

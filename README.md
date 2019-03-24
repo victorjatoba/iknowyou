@@ -18,7 +18,8 @@ Check https://github.com/victorjatoba/iknowyou/wiki/Project-Design for available
 
 You will need to install node and ionic on your machine in order to run the frontend project.
 
-Node: https://nodejs.org/en/ \n
+Node: https://nodejs.org/en/
+
 Ionic: https://ionicframework.com/docs/installation/cli
 
 The source code is located at the frontend folder. Just download it, get into the folder and run the following commands:

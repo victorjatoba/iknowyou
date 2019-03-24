@@ -8,20 +8,52 @@
 
 <ion-content>
   <ion-grid>
+    <!-- SEARCH COMPONENT -->
     <ion-row class="ion-justify-content-center">
       <ion-col size-sm="10" size-md="8" size-lg="7" size-lg="6" padding>
         <ion-item>
-          <ion-label>Select customer</ion-label>
-          <ionic-selectable
-            [(ngModel)]="selectedCustomer"
-            [items]="customerList"
-            itemValueField="id"
-            itemTextField="name"
-            [canSearch]="true"
-            (onChange)="searchCustomers($event)">
+          <ion-label>Select patient</ion-label>
+          <ionic-selectable [(ngModel)]="selectedPatient" [items]="patients" itemValueField="id" itemTextField="name"
+            [canSearch]="true" (onChange)="searchPatient($event)">
           </ionic-selectable>
         </ion-item>
 
+      </ion-col>
+    </ion-row>
+
+    <!-- PATIENT INFORMATIONS -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-sm="10" size-md="8" size-lg="7" size-lg="6" padding>
+        <ion-label>Patient details</ion-label>
+
+        <ion-row>
+          <ion-col padding>
+            <ion-label>Name:</ion-label>
+            <ion-text class="label-desc">{{selectedPatient?.name}}</ion-text>
+          </ion-col>
+          <ion-col padding>
+            <ion-label>blood type:</ion-label>
+            <ion-text class="label-desc">{{selectedPatient?.bloodType}}</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col padding>
+            <ion-label>Phone:</ion-label>
+            <ion-text class="label-desc">{{selectedPatient?.phone}}</ion-text>
+          </ion-col>
+          <ion-col padding>
+            <ion-label>Address:</ion-label>
+            <ion-text class="label-desc">{{selectedPatient?.address}}</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col padding>
+            <ion-label>Birthdate:</ion-label>
+            <ion-text class="label-desc">{{selectedPatient?.birthdate}}</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col padding>
       </ion-col>
     </ion-row>
   </ion-grid>

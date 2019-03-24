@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BloodType } from './model/blood-type.model';
 import { IonicSelectableComponent } from 'ionic-selectable';
+import { Patient } from './model/patient.model';
 
 @Component({
     selector: 'app-home',
@@ -9,9 +10,9 @@ import { IonicSelectableComponent } from 'ionic-selectable';
 })
 export class HomePage {
 
-    selectedCustomer: string;
+    selectedPatient: Patient;
 
-    customerList = [
+    patients = [
         {
             id: '1',
             name: 'Victor Jatobá',
@@ -32,19 +33,10 @@ export class HomePage {
         }
     ];
 
-    searchCustomers2(): Array<any> {
-        console.log(this.customerList.map(it => (it.name)));
-
-        return this.customerList
-            .map(it => (
-                it.name.includes(this.selectedCustomer)
-            ));
-    }
-
-    searchCustomers(event: {
+    searchPatient(event: {
         component: IonicSelectableComponent,
         value: any
     }) {
-        console.log(event.value);
+        console.log(this.selectedPatient);
     }
 }

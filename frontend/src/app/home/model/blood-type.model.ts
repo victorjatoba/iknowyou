@@ -2,12 +2,12 @@
  * The blood groups
  */
 export enum BloodType {
-    O_NEGATIVE = 'onegative',
-    O_POSITIVE = 'opositive',
-    A_NEGATIVE = 'anegative',
-    A_POSITIVE = 'apositive',
-    B_NEGATIVE = 'bnegative',
-    B_POSITIVE = 'bpositive',
-    AB_NEGATIVE = 'abnegative',
-    AB_POSITIVE = 'abpositive',
+    O_NEGATIVE = 'O-',
+    O_POSITIVE = 'O+',
+    A_NEGATIVE = 'A-',
+    A_POSITIVE = 'A+',
+    B_NEGATIVE = 'B-',
+    B_POSITIVE = 'B+',
+    AB_NEGATIVE = 'A-',
+    AB_POSITIVE = 'A+',
 }

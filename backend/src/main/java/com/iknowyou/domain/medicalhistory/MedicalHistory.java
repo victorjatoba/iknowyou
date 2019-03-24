@@ -4,13 +4,14 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.iknowyou.domain.patient.Patient;
+import com.iknowyou.infra.serializer.MedicalHistorySerializer;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,6 +21,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name="MEDICALHISTORY")
+@JsonSerialize(using= MedicalHistorySerializer.class)
 public class MedicalHistory {
 
 	@Id
@@ -30,7 +32,7 @@ public class MedicalHistory {
 	@Column(name="NOTE")
 	private String note;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne()
 	private Patient patient;
 	
 	

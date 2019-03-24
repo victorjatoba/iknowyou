@@ -2,7 +2,7 @@ package com.iknowyou.domain.patient;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Collection;
+import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,9 +21,9 @@ public class PatientRepositoryTest {
 	
 	@Test
 	public void test() {
-		final Collection<Patient> patients = repository.findAll();
+		final List<Patient> patients = repository.findAll();
 		assertEquals(1, patients.size());
-		
+		assertEquals("Luigi Scarminio", patients.get(0).getName());
 		
 		
 	}

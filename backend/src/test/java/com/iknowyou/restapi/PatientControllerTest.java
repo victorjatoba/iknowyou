@@ -52,7 +52,7 @@ public class PatientControllerTest {
 	
 	@Test
 	public void testFindHistoryByPatientId() throws Exception {
-		final MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/patient/1"))
+		final MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/api/history/1"))
                 .andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
 		JSONAssert.assertEquals(getMvcResultAsString(mvcResult), getJsonAsString("expected/expected_history_by_patient_id.json"),true);
 

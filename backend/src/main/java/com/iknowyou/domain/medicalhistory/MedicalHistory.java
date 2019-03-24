@@ -1,5 +1,5 @@
 package com.iknowyou.domain.medicalhistory;
 
-public class History {
+public class MedicalHistory {
 
 }

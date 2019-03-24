@@ -4,3 +4,17 @@ INSERT INTO PATIENT(name,age,bloodType,address,phone,emergencyContact) VALUES ('
 INSERT INTO PATIENT(name,age,bloodType,address,phone,emergencyContact) VALUES ('Ringo Starr',78,'B+','Yellow Submarine Street 123','+55 12 12345678', 'Call Mom +55 12 987654321');
 INSERT INTO PATIENT(name,age,bloodType,address,phone,emergencyContact) VALUES ('Paul McCartney',76,'O-','Abbey Road 123','+55 12 12345678', 'Call James +55 12 987654321');
 INSERT INTO PATIENT(name,age,bloodType,address,phone,emergencyContact) VALUES ('John Lennon',76,'O-','Heaven Street 123','+55 12 12345678', 'Dont call Yoko +55 12 987654321');
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2019-03-24','Headache at previous night. Took tylenol but the symptons still there.',1);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2019-01-13','Had nausea and headache previous night. Took 150mg Tylenol',1);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-12-30','The patients complains about continuous headache after being hit by a falling tree. Took on Aspirin.',1);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-01-24','Had stomach pain and loss of appetite. Took 120mg Tylenol',2);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-04-21','Nausea and vomiting. Took one Aspirin',2);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-05-24','Had rash. Took 750mg of Tylenol night before.',2);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-03-24','Dark urine. Patient needs water.',3);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-03-24','Had headache. One Aspirin.',3);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-03-24','Nausea. Took one Aspirin.',4);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-03-24','The patients complains about continuous headache after being hit by a falling tree. Took on Aspirin.',4);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-03-24','Nausea and stomach pain. Party day before. Only had one olive. One Aspirin',5);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-03-24','The patients complains about continuous headache after being hit by a falling tree. Took on Aspirin.',5);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-03-24','Dark urine. Patient needs water.',6);
+INSERT INTO MEDICALHISTORY(HISTORY_DATE,NOTE, PATIENT_ID) VALUES ('2018-03-24','The patients complains about continuous headache after being hit by a falling tree. Took on Aspirin.',6);

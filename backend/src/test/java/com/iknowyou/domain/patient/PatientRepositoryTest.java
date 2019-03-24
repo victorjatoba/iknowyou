@@ -22,7 +22,7 @@ public class PatientRepositoryTest {
 	@Test
 	public void test() {
 		final List<Patient> patients = repository.findAll();
-		assertEquals(1, patients.size());
+		assertEquals(6, patients.size());
 		assertEquals("Luigi Scarminio", patients.get(0).getName());
 		
 		

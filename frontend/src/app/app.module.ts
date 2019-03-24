@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { IonicSelectableModule } from 'ionic-selectable';
+import { ApiService } from './api/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [AppComponent],
@@ -17,13 +19,14 @@ import { IonicSelectableModule } from 'ionic-selectable';
     imports: [
         BrowserModule,
         IonicSelectableModule,
+        HttpClientModule,
         IonicModule.forRoot(),
         AppRoutingModule
     ],
     providers: [
         StatusBar,
         SplashScreen,
-        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     ],
     bootstrap: [AppComponent]
 })

@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BloodType } from './model/blood-type.model';
 import { IonicSelectableComponent } from 'ionic-selectable';
 import { Patient } from './model/patient.model';
+import { ApiService } from '../api/api.service';
+import { ApiRoute } from '../api/api-route.enum';
 
 @Component({
     selector: 'app-home',
     templateUrl: 'home.page.html',
     styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
     selectedPatient: Patient;
 
@@ -35,6 +37,16 @@ export class HomePage {
             keywords: ['celiac', 'lupus', 'Scleroderma']
         }
     ];
+
+    constructor(public apiService: ApiService) { }
+
+    ngOnInit() {
+
+        this.apiService.getWithNoAuth(ApiRoute.PATIENTS)
+            .subscribe(res => {
+                console.log(res);
+            });
+    }
 
     searchPatient(event: {
         component: IonicSelectableComponent,

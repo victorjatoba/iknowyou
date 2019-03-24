@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { IonicSelectableModule } from 'ionic-selectable';
+import { ApiService } from '../api/api.service';
+import { HttpClient } from 'selenium-webdriver/http';
 
 @NgModule({
   imports: [
@@ -20,6 +22,8 @@ import { IonicSelectableModule } from 'ionic-selectable';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [
+  ]
 })
 export class HomePageModule {}

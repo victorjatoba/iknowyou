@@ -1,39 +1,30 @@
 package com.iknowyou.domain.patient;
 
-import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.iknowyou.domain.medicalhistory.MedicalHistory;
+import com.iknowyou.domain.medicalhistory.MedicalHistoryRepository;
 
 public class PatientService {
 	
-	public List<Patient> getAllPatients() {
-		List<Patient> list = new LinkedList<>();
-		for (int i=0; i<15; i++) {
-			List<MedicalHistory> history = new LinkedList<>();
-			Patient p = new Patient(i, "name"+i, i+10, "bloodType"+i, "address"+i, "phone"+i, "emergencyContact"+i,history);
-			list.add(p);
-		}
-		
-		return list;
+	@Autowired
+	PatientRepository patientRepository;
+	MedicalHistoryRepository medicalRepository;
+	
+	public List<Patient> findAllPatients() {
+		return patientRepository.findAll();
 	}
 	
-	public List<MedicalHistory> getHistoryByPatientId(int patientId) {
-		List<Patient> list = new LinkedList<>();
-		for (int i=0; i<15; i++) {
-			List<MedicalHistory> history = new LinkedList<>();
-			Patient p = new Patient(i, "name"+i, i+10, "bloodType"+i, "address"+i, "phone"+i, "emergencyContact"+i,history);
-			list.add(p);
-		}
-		
-		for (int j=0; j<list.size();j++) {
-			if (list.get(j).getId() == patientId) {
-				return list.get(j).getHistories();
-			}
-		}
-		
-		return null;
-		
+	public Patient findPatientById(int patientId) {
+		Optional<Patient> p = patientRepository.findById(patientId);
+		return p.orElseThrow(() -> new PatientNotFoundException("Patient ID " + patientId + " not found"));
+	}
+	
+	public List<MedicalHistory> findAllHistoryByPatientId(int patientId) {
+		return medicalRepository.findAllByPatientId(patientId);
 	}
 
 }

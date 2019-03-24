@@ -40,7 +40,8 @@ public class Patient {
 	private String phone;
 	@Column
 	private String emergencyContact;
-	@OneToMany
+	
+	@OneToMany(mappedBy="patient")
 	private List<MedicalHistory> histories = new LinkedList<>();
 	
 	public List<MedicalHistory> getHistories() {

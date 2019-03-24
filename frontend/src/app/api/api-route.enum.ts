@@ -4,5 +4,6 @@
  */
 export enum ApiRoute {
     ROOT = '/',
-    PATIENTS = '/patients',
+    PATIENTS = 'patients',
+    KEYWORDS = 'patientdetail',
 }

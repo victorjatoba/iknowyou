@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { IonicSelectableModule } from 'ionic-selectable';
-import { ApiService } from './api/api.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({

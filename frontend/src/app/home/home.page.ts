@@ -3,7 +3,6 @@ import { BloodType } from './model/blood-type.model';
 import { IonicSelectableComponent } from 'ionic-selectable';
 import { Patient } from './model/patient.model';
 import { ApiService } from '../api/api.service';
-import { ApiRoute } from '../api/api-route.enum';
 
 @Component({
     selector: 'app-home',
@@ -18,40 +17,58 @@ export class HomePage implements OnInit {
         {
             id: '1',
             name: 'Victor Jatobá',
-            birthdate: '10/21/1988',
+            age: '21',
             bloodType: BloodType.O_NEGATIVE,
             keywords: ['diabets', 'lupus']
         },
         {
             id: '2',
             name: 'Matheus Silva',
-            birthdate: '03/11/1992',
+            age: '32',
             bloodType: BloodType.A_POSITIVE,
             keywords: ['Relapsing Polychondritis', 'lupus', 'Scleroderma', 'celiac', 'toothache', 'headache']
         },
         {
             id: '3',
             name: 'Luigi Scarminio',
-            birthdate: '01/27/1982',
+            age: '40',
             bloodType: BloodType.B_NEGATIVE,
             keywords: ['celiac', 'lupus', 'Scleroderma']
         }
     ];
 
+    keywords = [];
+
     constructor(public apiService: ApiService) { }
 
     ngOnInit() {
 
-        this.apiService.getWithNoAuth(ApiRoute.PATIENTS)
-            .subscribe(res => {
-                console.log(res);
-            });
+        this.getKeywords();
     }
 
     searchPatient(event: {
         component: IonicSelectableComponent,
         value: any
     }) {
-        console.log(this.selectedPatient);
+        this.getPatients();
+        this.getKeywords();
+    }
+
+    private getKeywords() {
+        const keyObservable = this.apiService.getKeywordsByPatient(this.selectedPatient.id)
+            .subscribe(res => {
+                console.log(res);
+                this.keywords = res;
+                keyObservable.unsubscribe();
+            });
+    }
+
+    private getPatients() {
+        const patientsObservable = this.apiService.getPatients()
+            .subscribe(res => {
+                console.log(res);
+                this.patients = res;
+                patientsObservable.unsubscribe();
+            });
     }
 }

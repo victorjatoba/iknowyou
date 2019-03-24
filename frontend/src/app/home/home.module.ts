@@ -6,8 +6,6 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { IonicSelectableModule } from 'ionic-selectable';
-import { ApiService } from '../api/api.service';
-import { HttpClient } from 'selenium-webdriver/http';
 
 @NgModule({
   imports: [

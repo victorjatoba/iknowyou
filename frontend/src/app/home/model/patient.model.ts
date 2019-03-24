@@ -6,9 +6,10 @@ import { BloodType } from './blood-type.model';
 export interface Patient {
     id: string;
     name: string;
+    age: string;
+    bloodType: BloodType;
     address?: string;
     phone?: string;
-    birthdate: string;
-    bloodType: BloodType;
+    emergencyContact?: string;
     keywords: Array<string>;
 }

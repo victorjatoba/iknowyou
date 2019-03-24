@@ -12,7 +12,7 @@
     <ion-row class="ion-justify-content-center">
       <ion-col size-sm="10" size-md="8" size-lg="7" size-lg="6" padding>
         <ion-item>
-          <ion-label>Select patient</ion-label>
+          <ion-label class="label-desc">Select patient</ion-label>
           <ionic-selectable [(ngModel)]="selectedPatient" [items]="patients" itemValueField="id" itemTextField="name"
             [canSearch]="true" (onChange)="searchPatient($event)">
           </ionic-selectable>
@@ -22,38 +22,65 @@
     </ion-row>
 
     <!-- PATIENT INFORMATIONS -->
-    <ion-row class="ion-justify-content-center">
-      <ion-col size-sm="10" size-md="8" size-lg="7" size-lg="6" padding>
-        <ion-label>Patient details</ion-label>
+    <ion-row padding class="ion-justify-content-center">
+      <ion-col size-sm="10" size-md="8" size-lg="6" padding>
+        <!-- TITLE -->
+        <ion-row class="ion-justify-content-center">
+          <ion-label class="label-title">PATIENT DETAILS</ion-label>
+        </ion-row>
 
-        <ion-row>
-          <ion-col padding>
-            <ion-label>Name:</ion-label>
-            <ion-text class="label-desc">{{selectedPatient?.name}}</ion-text>
+        <!-- DETAILS -->
+        <ion-row class="ion-justify-content-center">
+          <ion-col>
+            <ion-row>
+              <ion-col padding>
+                <ion-label>Name:</ion-label>
+                <ion-text class="label-desc">{{selectedPatient?.name}}</ion-text>
+              </ion-col>
+              <ion-col padding>
+                <ion-label>blood type:</ion-label>
+                <ion-text class="label-desc">{{selectedPatient?.bloodType}}</ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col padding>
+                <ion-label>Phone:</ion-label>
+                <ion-text class="label-desc">{{selectedPatient?.phone}}</ion-text>
+              </ion-col>
+              <ion-col padding>
+                <ion-label>Address:</ion-label>
+                <ion-text class="label-desc">{{selectedPatient?.address}}</ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col padding>
+                <ion-label>Birthdate:</ion-label>
+                <ion-text class="label-desc">{{selectedPatient?.birthdate}}</ion-text>
+              </ion-col>
+            </ion-row>
           </ion-col>
-          <ion-col padding>
-            <ion-label>blood type:</ion-label>
-            <ion-text class="label-desc">{{selectedPatient?.bloodType}}</ion-text>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col padding>
-            <ion-label>Phone:</ion-label>
-            <ion-text class="label-desc">{{selectedPatient?.phone}}</ion-text>
-          </ion-col>
-          <ion-col padding>
-            <ion-label>Address:</ion-label>
-            <ion-text class="label-desc">{{selectedPatient?.address}}</ion-text>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col padding>
-            <ion-label>Birthdate:</ion-label>
-            <ion-text class="label-desc">{{selectedPatient?.birthdate}}</ion-text>
-          </ion-col>
+
         </ion-row>
       </ion-col>
-      <ion-col padding>
+
+    </ion-row>
+
+    <!-- KEYWORDS -->
+    <ion-row padding class="ion-justify-content-center">
+      <ion-col size-sm="10" size-md="8" size-lg="6" padding>
+        <!-- TITLE -->
+        <ion-row class="ion-justify-content-center">
+          <ion-label class="label-title" padding>SMART MEDICAL HIGHLIGHTS</ion-label>
+        </ion-row>
+
+        <ion-row class="ion-justify-content-center">
+          <ion-col class="keywords-col" *ngFor="let keyword of selectedPatient?.keywords">
+            <ion-label class="label-desc">
+              {{keyword}}
+            </ion-label>
+
+          </ion-col>
+        </ion-row>
       </ion-col>
     </ion-row>
   </ion-grid>

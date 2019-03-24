@@ -1,0 +1,56 @@
+[
+{
+"id": 1,
+"name": "Luigi Scarminio",
+"age": 37,
+"bloodType": "O-",
+"address": "Cool Street 123",
+"phone": "+55 12 12345678",
+"emergencyContact": "Call Mom +55 12 987654321"
+},
+{
+"id": 2,
+"name": "Victor Jatoba",
+"age": 31,
+"bloodType": "AB+",
+"address": "Lets Rock Street 321",
+"phone": "+55 63 12345678",
+"emergencyContact": "Call Wife +55 63 987654321"
+},
+{
+"id": 3,
+"name": "Ilya Brotsky",
+"age": 15,
+"bloodType": "A+",
+"address": "Cool Street 123",
+"phone": "+55 12 12345678",
+"emergencyContact": "Call Mom +55 12 987654321"
+},
+{
+"id": 4,
+"name": "Ringo Starr",
+"age": 78,
+"bloodType": "B+",
+"address": "Yellow Submarine Street 123",
+"phone": "+55 12 12345678",
+"emergencyContact": "Call Mom +55 12 987654321"
+},
+{
+"id": 5,
+"name": "Paul McCartney",
+"age": 76,
+"bloodType": "O-",
+"address": "Abbey Road 123",
+"phone": "+55 12 12345678",
+"emergencyContact": "Call James +55 12 987654321"
+},
+{
+"id": 6,
+"name": "John Lennon",
+"age": 76,
+"bloodType": "O-",
+"address": "Heaven Street 123",
+"phone": "+55 12 12345678",
+"emergencyContact": "Dont call Yoko +55 12 987654321"
+}
+]

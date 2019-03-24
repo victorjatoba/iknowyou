@@ -24,6 +24,7 @@ public class PatientRepositoryTest {
 		final List<Patient> patients = repository.findAll();
 		assertEquals(6, patients.size());
 		assertEquals("Luigi Scarminio", patients.get(0).getName());
+//		assertEquals(0, patients.get(0).getHistories().size());
 		
 		
 	}

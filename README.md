@@ -4,7 +4,7 @@
 
 By searching by patient's name, the doctor can visualize all the patient basic information, a quick medical history briefing with highlighted keywords and access to the complete medical history files.
 
-![](https://github.com/victorjatoba/iknowyou/blob/develop/backend/userDocs/i_know_you.png)
+![](https://raw.githubusercontent.com/victorjatoba/iknowyou/master/docs/i_know_you.png)
 
 # How To Execute
 

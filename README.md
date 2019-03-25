@@ -1,4 +1,13 @@
-# iknowyou
+# I know you
+Smart patient highlight based on medical history.
+
+<img src="https://github.com/victorjatoba/iknowyou/blob/master/docs/screenshots/page01.png?raw=true" width="30%" height="30%">   <img src="https://github.com/victorjatoba/iknowyou/blob/master/docs/screenshots/page02.png?raw=true" width="30%" height="30%">   <img src="https://github.com/victorjatoba/iknowyou/blob/master/docs/screenshots/page03.png?raw=true" width="30%" height="30%">
+
+## Supported Platforms
+- Web application: Chrome, firefox, Edge and Safari
+- Native app: Android 4.1 and up.
+
+## Details
 
 "I know you' helps doctors to get a quick glance of patient history by using machine learning to highlight keywords like patient's past symptoms, medicine and doctor's actions taken.
 

@@ -24,8 +24,8 @@ Ionic: https://ionicframework.com/docs/installation/cli
 
 The source code is located at the frontend folder. Just download it, get into the folder and run the following commands:
 
-npm install
-ionic serve
+1. npm install
+2. ionic serve
 
 ### Known Issues
 

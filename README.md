@@ -1,5 +1,7 @@
 # I know you
-Smart patient highlight based on medical history.
+> Smart patient highlight based on medical history.
+
+![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)
 
 <img src="https://github.com/victorjatoba/iknowyou/blob/master/docs/screenshots/page01.png?raw=true" width="30%" height="30%">   <img src="https://github.com/victorjatoba/iknowyou/blob/master/docs/screenshots/page02.png?raw=true" width="30%" height="30%">   <img src="https://github.com/victorjatoba/iknowyou/blob/master/docs/screenshots/page03.png?raw=true" width="30%" height="30%">
 

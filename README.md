@@ -6,7 +6,7 @@
 <img src="https://github.com/victorjatoba/iknowyou/blob/master/docs/screenshots/page01.png?raw=true" width="30%" height="30%">   <img src="https://github.com/victorjatoba/iknowyou/blob/master/docs/screenshots/page02.png?raw=true" width="30%" height="30%">   <img src="https://github.com/victorjatoba/iknowyou/blob/master/docs/screenshots/page03.png?raw=true" width="30%" height="30%">
 
 ### Supported Platforms
-- Web application: Chrome, firefox, Edge and Safari
+- Responsive Web application: Chrome, firefox, Edge and Safari
 - Native app: Android 4.1 and up.
 
 ### More details

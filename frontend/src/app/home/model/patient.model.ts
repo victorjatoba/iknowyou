@@ -1,7 +1,7 @@
 import { BloodType } from './blood-type.model';
 
 /**
- * User Model information.
+ * Patient information.
  */
 export interface Patient {
     id: string;

@@ -4,6 +4,12 @@ import { IonicSelectableComponent } from 'ionic-selectable';
 import { Patient } from './model/patient.model';
 import { ApiService } from '../api/api.service';
 
+/**
+ * @name home.page
+ *
+ * @description
+ * The home page of the system.
+ */
 @Component({
     selector: 'app-home',
     templateUrl: 'home.page.html',
